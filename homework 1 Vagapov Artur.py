@@ -34,7 +34,7 @@ allseconds = allsecondsUsers % 3600
 minutes = allseconds // 60 # 60 секунд в минуте
 seconds = allseconds % 60 
 
-print("%d секунд, это %d часов %d минут %d секунд" % (allsecondsUsers, hours, minutes, seconds))
+print("%d секунд, это %02d:%02d:%02d" % (allsecondsUsers, hours, minutes, seconds))
 
 # 3 часть ДЗ 
 
@@ -56,8 +56,8 @@ print(maxNum)
 # 5 часть ДЗ 
 margin = int(input("Введите выручку компании: "))
 rashod = int(input("Введите расходы компании: "))
-if margin > rashod:
-    print("Компания отработала с прибылью, рентабельность компании %f" % (margin/rashod))
+if (margin - rashod) > rashod:
+    print("Компания отработала с прибылью, рентабельность компании %f" % ((margin - rashod)/rashod))
     colSotrudnikov = int(input("Сколько сотрудников в компании: "))
     print("Прибыль фирмы в расчете на одного сотрудника %f" % (margin/colSotrudnikov))
 else:
